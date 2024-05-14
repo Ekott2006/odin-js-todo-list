@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  <script defer src="main.js"></script></head>
+  <body>
+    <div id="dialogs">
+      <dialog id="delete-dialog" aria-labelledby="delete-dialog-heading">
+        <h2 id="delete-dialog-heading" class="dialog-heading">
+          Delete Project
+        </h2>
+        <p class="dialog-body">Are you sure you want to delete this project?</p>
+        <form method="dialog" id="delete-form">
+          <input id="delete-form-id" hidden required />
+          <div class="dialog-button">
+            <button type="submit" class="btn btn-danger">Delete</button>
+            <button
+              type="reset"
+              class="btn btn-transparent"
+              id="dialog-button-cancel"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </dialog>
+      <dialog id="create-dialog" aria-labelledby="create-dialog-heading">
+        <h2 id="create-dialog-heading" class="dialog-heading">
+          Create Project
+        </h2>
+        <form method="dialog" id="create-form">
+          <div class="form-control">
+            <label>
+              Name:
+              <input
+                type="text"
+                class="form-input"
+                id="create-project-form-name"
+              />
+            </label>
+          </div>
+          <div class="form-control">
+            <label>
+              Description:
+              <textarea
+                class="form-input"
+                id="create-project-form-desc"
+              ></textarea>
+            </label>
+          </div>
+          <div class="dialog-button">
+            <button type="submit" class="btn btn-danger">Create</button>
+            <button
+              type="reset"
+              class="btn btn-transparent"
+              id="create-dialog-button-cancel"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </dialog>
+      <dialog id="edit-dialog" aria-labelledby="edit-dialog-heading">
+        <h2 id="edit-dialog-heading" class="dialog-heading">Edit Project</h2>
+        <form method="dialog" id="edit-form">
+          <input id="edit-project-form-id" hidden required />
+          <div class="form-control">
+            <label>
+              Name:
+              <input
+                type="text"
+                class="form-input"
+                id="edit-project-form-name"
+              />
+            </label>
+          </div>
+          <div class="form-control">
+            <label>
+              Description:
+              <textarea
+                class="form-input"
+                id="edit-project-form-desc"
+              ></textarea>
+            </label>
+          </div>
+          <div class="dialog-button">
+            <button type="submit" class="btn btn-danger">Edit</button>
+            <button
+              type="reset"
+              class="btn btn-transparent"
+              id="edit-dialog-button-cancel"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </dialog>
+      <dialog
+        id="create-checklist-dialog"
+        aria-labelledby="create-checklist-dialog-heading"
+      >
+        <h2 id="create-checklist-dialog-heading" class="dialog-heading">
+          Create Checklist
+        </h2>
+        <form method="dialog" id="create-checklist-form">
+          <div class="form-control">
+            <label>
+              Title:
+              <input
+                type="text"
+                class="form-input"
+                id="create-checklist-project-form-name"
+              />
+            </label>
+          </div>
+          <div class="form-control">
+            <label>
+              Description:
+              <textarea
+                class="form-input"
+                id="create-checklist-project-form-desc"
+              ></textarea>
+            </label>
+          </div>
+          <div class="form-control">
+            <label>
+              Priority:
+              <select
+                id="create-checklist-project-form-priority"
+                class="form-input"
+              >
+                <option>Choose an Priority</option>
+                <option value="0">LOW</option>
+                <option value="1">MEDIUM</option>
+                <option value="2">HIGH</option>
+                <option value="3">URGENT</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-control">
+            <label>
+              Due Date:
+              <input
+                type="date"
+                class="form-input"
+                id="create-checklist-project-form-due-date"
+              />
+            </label>
+          </div>
+          <div class="dialog-button">
+            <button type="submit" class="btn btn-danger">Create</button>
+            <button
+              type="reset"
+              class="btn btn-transparent"
+              id="create-checklist-dialog-button-cancel"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </dialog>
+    </div>
+    <aside>
+      <div class="project-header-container">
+        <h2>Projects</h2>
+        <button class="btn btn-transparent" id="add-project-button">
+          <img id="add" />
+          New Project
+        </button>
+      </div>
+      <ul id="all-projects"></ul>
+    </aside>
+    <main>
+      <div class="project-intro">
+        <div class="heading">
+          <h1 id="project-intro-text"></h1>
+          <button id="edit-project-dialog-btn" class="btn btn-transparent">
+            Edit<img id="edit-dialog-img" />
+          </button>
+        </div>
+
+        <p id="project-intro-description"></p>
+      </div>
+
+      <div class="checklist">
+        <div class="checklist-heading">
+          <h2>Checklist</h2>
+          <button class="btn btn-primary" id="create-checklist">
+            Create New
+          </button>
+        </div>
+        <ul id="check-list"></ul>
+      </div>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

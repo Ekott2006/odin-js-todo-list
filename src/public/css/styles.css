@@ -1,0 +1,231 @@
+body {
+  display: flex;
+  height: 100vw;
+  background-color: rgb(29, 28, 28);
+  color: white;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif !important;
+  overflow: auto;
+}
+
+aside {
+  box-shadow: 0 0 20px black;
+  background-color: rgb(19, 18, 18);
+}
+
+aside > * {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.project-header-container {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.project-header-container > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+}
+
+.project-header-container > button:hover {
+  border-radius: 10px;
+  background-color: black;
+}
+
+#add {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.project-header-container h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+#all-projects > li {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  padding: 5px;
+  cursor: pointer;
+}
+.list-item-selected {
+  background-color: black;
+  border-radius: 10px;
+}
+#all-projects p {
+  margin-left: 10px;
+}
+#all-projects button {
+  margin-left: auto;
+}
+#all-projects img {
+  width: 2rem;
+}
+
+main {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 2rem;
+}
+.project-intro {
+  padding: 3rem 0;
+}
+.heading {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+#edit-project-dialog-btn {
+  display: flex;
+  font-size: larger;
+}
+#edit-dialog-img {
+  width: 1.5rem;
+}
+#project-intro-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-right: auto;
+  padding-bottom: 10px;
+}
+#project-intro-description {
+  font-size: 1.2rem;
+}
+.checklist-heading {
+  display: flex;
+  padding-bottom: 10px;
+}
+.checklist-heading h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.checklist-heading button {
+  margin-left: auto;
+  font-size: 1.1rem;
+}
+.checklist li {
+  background-color: rgb(19, 18, 18);
+  border-radius: 10px;
+}
+.checklist-item {
+  font-size: 1.2rem;
+  display: flex;
+  gap: 1rem;
+  padding: 10px;
+  margin: 10px 0;
+}
+.checklist img {
+  width: 2rem;
+  height: 2rem;
+}
+.project-holder {
+  display: grid;
+  gap: 10px;
+}
+.project-title {
+  font-weight: bold;
+}
+.project-delete {
+  margin-left: auto;
+}
+.project-due-date {
+  font-size: 1rem;
+}
+.take-action {
+  width: 100%;
+  height: 5px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: yellow;
+}
+.take-action-critical {
+  background: red;
+}
+
+dialog {
+  background-color: rgb(19, 18, 18);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 20px black;
+  color: white;
+  font-size: 1.5rem;
+  min-width: 400px;
+}
+dialog option {
+  background-color: black;
+  color: white;
+}
+.dialog-heading {
+  font-size: larger;
+  font-weight: bold;
+  text-align: center;
+}
+.dialog-button {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+}
+.dialog-body {
+  padding: 1rem;
+}
+.dialog-button button {
+  padding: 7px;
+}
+#dialog-button-cancel {
+  background-color: black;
+}
+
+.form-control {
+  margin: 20px 0;
+}
+
+.form-control > label {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px white solid;
+  display: block;
+  font-size: 1rem;
+  background: inherit;
+  color: white;
+}
+
+.btn {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.btn-transparent {
+  background-color: inherit;
+  color: inherit;
+}
+
+.btn:hover {
+  transform: scale(1.2);
+}
+
+.btn-primary {
+  color: white;
+  background: dodgerblue;
+}
+
+.btn-danger {
+  color: white;
+  background: #d94242;
+}

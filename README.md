@@ -1,10 +1,10 @@
-# Restaurant Website
+# TODO List Website
 
-Project to create a Restaurant Website using only HTML, CSS and JS.
+Project to create a TODO List Website using only HTML, CSS and JS.
 
-From The Odin Project's [curriculum](https://www.theodinproject.com/lessons/javascript-restaurant-page).
+From The Odin Project's [curriculum](https://www.theodinproject.com/lessons/javascript-todo-list).
 
-🔗 **Live preview:** [here](https://ekott2006.github.io/odin-js-restaurant)
+🔗 **Live preview:** [here](https://ekott2006.github.io/odin-js-todo-list)
 
 ## Built with
 
